@@ -28,6 +28,7 @@
     ],
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
+    "no-console": "off",
     "linebreak-style": "off",
     "prettier/prettier": [
       "error",

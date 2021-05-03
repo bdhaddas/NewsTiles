@@ -1,0 +1,23 @@
+{
+  "name": "newstiles",
+  "version": "1.0.0",
+  "description": "NewsTiles application with MERN stack",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run watch\" \"cd frontend && npm start\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdhaddas/NewsTiles.git"
+  },
+  "author": "Balraj, Danyaal, Darren, Pedrum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bdhaddas/NewsTiles/issues"
+  },
+  "homepage": "https://github.com/bdhaddas/NewsTiles#readme"
+}

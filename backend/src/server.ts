@@ -5,5 +5,5 @@ import { port, databaseURI } from './config';
 connect(databaseURI);
 
 app.listen(port, () => {
-  console.log('server is listening at http://localhost:3000');
+  console.log(`server is listening at http://localhost:${port}`);
 });
