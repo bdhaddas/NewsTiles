@@ -3,7 +3,7 @@ import newsController from '../controllers/news';
 
 const router: Router = express.Router();
 
-// @route   GET /api/nws
+// @route   GET /api/news
 // @desc    Get News articles form NewsApi
 // @access  Public
 router.get('/', newsController.getNews);
