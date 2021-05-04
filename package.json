@@ -8,7 +8,7 @@
     "concurrently": "^6.0.2"
   },
   "scripts": {
-    "dev": "concurrently \"cd backend && npm run watch\" \"cd frontend && npm start\" "
+    "dev": "concurrently \"cd backend && npm run watch:node\" \"cd frontend && npm start\" "
   },
   "repository": {
     "type": "git",

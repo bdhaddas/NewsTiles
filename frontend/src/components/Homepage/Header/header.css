@@ -1,0 +1,16 @@
+.titletext {
+  font-family: Open Sans !important;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px !important;
+  line-height: 109px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #5086ec !important;
+}
+
+.Register {
+  background-color: #5086ec !important;
+  border-radius: 100px !important;
+}
