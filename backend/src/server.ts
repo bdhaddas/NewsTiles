@@ -1,8 +1,6 @@
 import app from './app';
-import connect from './database';
-import { port, databaseURI } from './config';
-
-connect(databaseURI);
+import { port } from './config';
+import './database';
 
 app.listen(port, () => {
   console.log(`server is listening at http://localhost:${port}`);
