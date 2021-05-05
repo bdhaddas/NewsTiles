@@ -1,121 +1,42 @@
-import React from 'react';
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardDeck,
-  CardSubtitle,
-  CardBody,
-  Container,
-  Row,
-  Col,
-} from 'reactstrap';
-// import { env.svg } from '../components/icons';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { uuid } from 'uuidv4';
+import NewsTile from '../NewsTile/NewsTile';
+
+type NewsStory = {
+  sourceName: string;
+  title: string;
+  urlToImage: string;
+  publishedAt: string;
+  content: string;
+};
 
 const Body = () => {
+  const [news, setNews] = useState<NewsStory[]>([]);
+
+  useEffect(() => {
+    const getNews = async (): Promise<void> => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/news');
+        setNews(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getNews();
+  }, []);
   return (
-    <CardDeck>
-      <Container>
-        <Row>
-          <Col>
-            <Card>
-              <CardImg top width='100%' src='/assets/256x186.svg' alt='Card image cap' />
-              <CardBody>
-                <CardTitle tag='h5'>Card title</CardTitle>
-                <CardSubtitle tag='h6' className='mb-2 text-muted'>
-                  Card subtitle
-                </CardSubtitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <CardImg top width='100%' src='/assets/256x186.svg' alt='Card image cap' />
-              <CardBody>
-                <CardTitle tag='h5'>Card title</CardTitle>
-                <CardSubtitle tag='h6' className='mb-2 text-muted'>
-                  Card subtitle
-                </CardSubtitle>
-                <CardText>
-                  This card has supporting text below as a natural lead-in to additional content.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <CardImg top width='100%' src='/assets/256x186.svg' alt='Card image cap' />
-              <CardBody>
-                <CardTitle tag='h5'>Card title</CardTitle>
-                <CardSubtitle tag='h6' className='mb-2 text-muted'>
-                  Card subtitle
-                </CardSubtitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal
-                  height action.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row>
-          <Col>
-            <Card>
-              <CardImg top width='100%' src='/assets/256x186.svg' alt='Card image cap' />
-              <CardBody>
-                <CardTitle tag='h5'>Card title</CardTitle>
-                <CardSubtitle tag='h6' className='mb-2 text-muted'>
-                  Card subtitle
-                </CardSubtitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <CardImg top width='100%' src='/assets/256x186.svg' alt='Card image cap' />
-              <CardBody>
-                <CardTitle tag='h5'>Card title</CardTitle>
-                <CardSubtitle tag='h6' className='mb-2 text-muted'>
-                  Card subtitle
-                </CardSubtitle>
-                <CardText>
-                  This card has supporting text below as a natural lead-in to additional content.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <CardImg top width='100%' src='/assets/256x186.svg' alt='Card image cap' />
-              <CardBody>
-                <CardTitle tag='h5'>Card title</CardTitle>
-                <CardSubtitle tag='h6' className='mb-2 text-muted'>
-                  Card subtitle
-                </CardSubtitle>
-                <CardText>
-                  This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal
-                  height action.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </CardDeck>
+    <div className='container'>
+      {news.map((story) => (
+        <NewsTile
+          key={uuid()}
+          source={story.sourceName}
+          title={story.title}
+          urlToImage={story.urlToImage}
+          publishedAt={story.publishedAt}
+        />
+      ))}
+    </div>
   );
 };
 

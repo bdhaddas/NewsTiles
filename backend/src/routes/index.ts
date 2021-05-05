@@ -5,6 +5,6 @@ import helloWorldRouter from './helloWorld';
 const router: Router = express.Router();
 
 router.use('/', helloWorldRouter);
-router.use('/news/api', newsRouter);
+router.use('/api/news', newsRouter);
 
 export default router;

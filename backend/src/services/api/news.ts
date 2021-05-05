@@ -21,7 +21,7 @@ type ResponseArticle = {
 };
 
 const fetchArticles = async (): Promise<ResponseArticle[]> => {
-  const uri = `https://newsapi.org/v2/top-headlines?language=en&apiKey=${newsApiKey}`;
+  const uri = `https://newsapi.org/v2/top-headlines?country=gb&apiKey=${newsApiKey}`;
 
   const response = await axios.get(uri);
   const { articles } = response.data;

@@ -6,13 +6,42 @@ body {
   padding-top: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e5e5e5;
+  background-color: #f1f2f4 !important;
   justify-content: space-between;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   max-width: 98%;
   margin: auto;
 }
 
+.tiles {
+  background: #ffffff !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 20px !important;
+  width: 320px;
+  height: 400px;
+}
+
+.modalbox {
+  background: #ffffff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html,
+body {
+  padding: 0 !important;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: center;
+  position: relative;
 }

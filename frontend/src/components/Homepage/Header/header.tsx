@@ -3,7 +3,7 @@ import './header.css';
 import { Navbar, NavbarBrand, Button } from 'reactstrap';
 import RegisterModal from '../RegisterModal/registermodal';
 
-const HeaderBar = () => {
+const Header = () => {
   return (
     <div className='header-bar'>
       <Navbar color='faded' light>
@@ -11,13 +11,14 @@ const HeaderBar = () => {
           NewsTiles
         </NavbarBrand>
         <Button color='link'>Sign-In</Button>
-        <Button color='primary' className='Register'>
+        {/* <Button color='primary' className='Register'>
           Register
-        </Button>{' '}
+          
+        </Button>{' '} */}
         <RegisterModal />
       </Navbar>
     </div>
   );
 };
 
-export default HeaderBar;
+export default Header;

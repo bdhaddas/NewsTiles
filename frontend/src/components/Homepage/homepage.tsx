@@ -1,12 +1,14 @@
 import React from 'react';
-import HeaderBar from './Header/header';
+import Header from './Header/header';
 import Body from './Body/body';
+import Footer from './Footer/footer';
 
 export default function Homepage() {
   return (
     <div>
-      <HeaderBar />
+      <Header />
       <Body />
+      <Footer />
     </div>
   );
 }
