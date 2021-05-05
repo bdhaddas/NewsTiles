@@ -1,7 +1,8 @@
 import React from 'react';
 import './header.css';
 import { Navbar, NavbarBrand, Button } from 'reactstrap';
-import RegisterModal from '../RegisterModal/registermodal';
+import RegisterModal from '../../RegisterModal/registermodal';
+import SigninModal from '../../SigninModal/signinmodal';
 
 const Header = () => {
   return (
@@ -10,11 +11,7 @@ const Header = () => {
         <NavbarBrand href='/' className='titletext header-title mr-auto'>
           NewsTiles
         </NavbarBrand>
-        <Button color='link'>Sign-In</Button>
-        {/* <Button color='primary' className='Register'>
-          Register
-          
-        </Button>{' '} */}
+        <SigninModal />
         <RegisterModal />
       </Navbar>
     </div>

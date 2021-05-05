@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "NewsTiles application with MERN stack",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "concurrently": "^6.0.2"
   },

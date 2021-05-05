@@ -1,0 +1,18 @@
+.signin-modal-title {
+    width: 452px !important;
+    height: 64px !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    font-size: 40px !important;
+    line-height: 82px !important; 
+    display: flex !important;
+    align-items: center !important;
+    align-content: center;
+    text-align: center !important;
+    color: #5086EC !important;
+    padding-left: 20%
+}
+
+.modal-open .container-fluid, .modal-open  .container {
+    -webkit-filter: blur(5px) grayscale(90%);
+}

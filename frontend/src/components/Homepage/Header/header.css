@@ -32,3 +32,59 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
 }
+
+
+@media screen and (min-width: 800px) {
+  .titletext {
+    font-family: Open Sans !important;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px !important;
+    line-height: 109px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #5086ec !important;
+    padding-left: 50px;
+  }
+
+  .Register {
+    background-color: #5086ec !important;
+    border-radius: 100px !important;
+    width: 120px;
+    height: 40px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold !important;
+    font-size: 20px;
+    /*line-height: 41px;*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .modalbox {
+    background: #ffffff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .titletext {
+    font-size: 40px !important;
+    align-items: center !important;
+  }
+  .Register {
+    size: 10px;
+  }
+
+  .burger {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 38px;
+    top: 30px;
+  }
+}
