@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import RegisterForm from './registerform';
 import './registermodal.css';
-import '../Homepage/Header/header.css';
+import '../Header/header.css';
 
 const RegisterModal = () => {
   const [modal, setModal] = useState(false);

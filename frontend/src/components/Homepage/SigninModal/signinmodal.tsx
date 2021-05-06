@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import SigninForm from './signinform';
 import './signinmodal.css';
-import '../Homepage/Header/header.css';
+import '../Header/header.css';
 
 const SigninModal = () => {
   const [modal, setModal] = useState(false);

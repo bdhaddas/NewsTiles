@@ -1,8 +1,8 @@
 import React from 'react';
 import './header.css';
 import { Navbar, NavbarBrand, Button } from 'reactstrap';
-import RegisterModal from '../../RegisterModal/registermodal';
-import SigninModal from '../../SigninModal/signinmodal';
+import RegisterModal from '../RegisterModal/registermodal';
+import SigninModal from '../SigninModal/signinmodal';
 
 const Header = () => {
   return (

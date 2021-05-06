@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "NewsTiles application with MERN stack",
   "main": "index.js",
+  "dependencies": {
+    "bootstrap-icons": "^1.4.1",
+    "mdb-ui-kit": "^3.5.1"
+  },
   "devDependencies": {
-    "concurrently": "^6.0.2"
+    "concurrently": "^6.0.2",
+    "react-icons": "^4.2.0"
   },
   "scripts": {
     "dev": "concurrently \"cd backend && npm run watch:node\" \"cd frontend && npm start\" "
